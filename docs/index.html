@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1 Ano de Nós</title>
+<title>1 Ano de Nós ❤️</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family: Arial, sans-serif;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
     background:#fff5f7;
     color:#333;
 }
@@ -17,89 +22,160 @@ header{
     background:linear-gradient(135deg,#ff4d6d,#ff8fa3);
     color:white;
     text-align:center;
-    padding:60px 20px;
+    padding:80px 20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
 }
 
 .timeline{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
-    padding:40px 20px;
+    padding:50px 20px;
 }
 
 .card{
     background:white;
-    padding:20px;
-    margin:20px 0;
-    border-radius:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    border-left:6px solid #ff4d6d;
+    padding:25px;
+    margin-bottom:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    border-left:8px solid #ff4d6d;
+    transition:all .3s ease;
     text-align:center;
 }
 
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#ff4d6d;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
 .foto-timeline{
-    width:90%;
-    max-width:800px;
+    width:100%;
+    max-width:700px;
     height:auto;
     display:block;
-    margin:25px auto 0;
+    margin:auto;
     border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.2);
-    transition:transform 0.3s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-.foto-timeline:hover{
-    transform:scale(1.02);
+footer{
+    background:#ffe5ec;
+    text-align:center;
+    padding:50px 20px;
+    margin-top:40px;
+}
+
+.frase{
+    color:#ff4d6d;
+    font-size:1.8rem;
+    font-style:italic;
+    margin-bottom:20px;
+}
+
+.assinatura{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2.2rem;
+    }
+
+    .card{
+        padding:20px;
+    }
 }
 </style>
-
 </head>
 <body>
 
-<div class="card">
-    <h2>🌹 O Começo</h2>
-    <p>
-        Em 12 de junho de 2025 começou uma história que mudaria nossas vidas.
-        O que parecia apenas mais um capítulo se transformou em uma jornada cheia
-        de amor, companheirismo e crescimento.
-    </p>
-    <img src="/docs/img/foto01.jpeg" class="foto-timeline" alt="O Começo">
-</div>
+<header>
+    <h1>❤️ 1 Ano de Nós ❤️</h1>
+    <p>Jhonathan & Jessica</p>
+    <p>12/06/2025 → 12/06/2026</p>
+</header>
 
-<div class="card">
-    <h2>💬 As Primeiras Conversas</h2>
-    <p>
-        Horas de mensagens, risadas e descobertas. Cada conversa nos aproximava
-        mais e mostrava que havia algo especial acontecendo.
-    </p>
-    <img src="/docs/img/foto02.jpeg" class="foto-timeline" alt="Primeiras Conversas">
-</div>
+<section class="timeline">
 
-<div class="card">
-    <h2>📸 Momentos Inesquecíveis</h2>
-    <p>
-        Fotos, passeios, encontros e memórias que ficarão guardadas para sempre.
-        Cada instante construiu a nossa história.
-    </p>
-    <img src="/docs/img/foto03.jpeg" class="foto-timeline" alt="Momentos Inesquecíveis">
-</div>
+    <div class="card">
+        <h2>🌹 O Começo</h2>
+        <p>
+            Em 12 de junho de 2025 começou uma história que mudaria nossas vidas.
+            O que parecia apenas mais um capítulo se transformou em uma jornada cheia
+            de amor, companheirismo e crescimento.
+        </p>
+        <img src="/docs/img/foto01.jpeg" class="foto-timeline">
+    </div>
 
-<div class="card">
-    <h2>🤝 Superando Desafios</h2>
-    <p>
-        Nem todos os dias foram fáceis, mas cada dificuldade serviu para fortalecer
-        nossa união e mostrar a força do nosso amor.
-    </p>
-    <img src="/docs/img/foto04.jpeg" class="foto-timeline" alt="Superando Desafios">
-</div>
+    <div class="card">
+        <h2>💬 As Primeiras Conversas</h2>
+        <p>
+            Horas de mensagens, risadas e descobertas. Cada conversa nos aproximava
+            mais e mostrava que havia algo especial acontecendo.
+        </p>
+        <img src="/docs/img/foto02.jpeg" class="foto-timeline">
+    </div>
 
-<div class="card">
-    <h2>❤️ Um Ano Depois</h2>
-    <p>
-        Hoje celebramos 1 ano juntos. Um ano de aprendizado, carinho,
-        cumplicidade e sonhos compartilhados.
-    </p>
-    <img src="/docs/img/foto05.jpeg" class="foto-timeline" alt="Um Ano Depois">
-</div>
+    <div class="card">
+        <h2>📸 Momentos Inesquecíveis</h2>
+        <p>
+            Fotos, passeios, encontros e memórias que ficarão guardadas para sempre.
+            Cada instante construiu a nossa história.
+        </p>
+        <img src="/docs/img/foto03.jpeg" class="foto-timeline">
+    </div>
+
+    <div class="card">
+        <h2>🤝 Superando Desafios</h2>
+        <p>
+            Nem todos os dias foram fáceis, mas cada dificuldade serviu para fortalecer
+            nossa união e mostrar a força do nosso amor.
+        </p>
+        <img src="/docs/img/foto04.jpeg" class="foto-timeline">
+    </div>
+
+    <div class="card">
+        <h2>❤️ Um Ano Depois</h2>
+        <p>
+            Hoje celebramos 1 ano juntos. Um ano de aprendizado, carinho,
+            cumplicidade e sonhos compartilhados.
+        </p>
+        <img src="/docs/img/foto05.jpeg" class="foto-timeline">
+    </div>
+
+</section>
+
+<footer>
+    <div class="frase">
+        "Nunca desistir."
+    </div>
+
+    <div class="assinatura">
+        Obrigado por cada momento vivido ao seu lado.<br>
+        Que este seja apenas o primeiro de muitos anos juntos. ❤️<br><br>
+        Com amor,<br>
+        Jhonathan
+    </div>
+</footer>
 
 </body>
 </html>
