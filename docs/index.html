@@ -59,8 +59,92 @@ footer{
     font-style:italic;
     color:#ff4d6d;
 }
+
+.carousel-container{
+    position:relative;
+    max-width:900px;
+    margin:40px auto;
+}
+
+.carousel{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.slide{
+    display:none;
+    width:100%;
+    max-height:700px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.slide.active{
+    display:block;
+}
+
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,.8);
+    border:none;
+    cursor:pointer;
+    font-size:30px;
+    padding:10px 18px;
+    border-radius:50%;
+    z-index:10;
+}
+
+.prev{
+    left:-20px;
+}
+
+.next{
+    right:-20px;
+}
+
+.prev:hover,
+.next:hover{
+    background:#ff4d6d;
+    color:white;
+}
+    
 </style>
 </head>
+
+<script>
+let slideAtual = 0;
+const slides = document.querySelectorAll('.slide');
+
+function mostrarSlide(index){
+
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+    if(index >= slides.length){
+        slideAtual = 0;
+    } else if(index < 0){
+        slideAtual = slides.length - 1;
+    } else {
+        slideAtual = index;
+    }
+
+    slides[slideAtual].classList.add('active');
+}
+
+function mudarSlide(direcao){
+    mostrarSlide(slideAtual + direcao);
+}
+
+// troca automática a cada 4 segundos
+setInterval(() => {
+    mudarSlide(1);
+}, 4000);
+</script>
 
 <body>
 
@@ -115,17 +199,21 @@ footer{
 
 </section>
     
-<section class="galeria">
-    <h2>Nossos Momentos ❤️</h2>
+<div class="carousel-container">
 
-    <div class="fotos">
-        <img src="https://jhonathanturial.github.io/1-years-j-j/img/foto01.jpeg" alt="Foto 1">
-        <img src="https://jhonathanturial.github.io/1-years-j-j/img/foto02.jpeg" alt="Foto 2">
-        <img src="https://jhonathanturial.github.io/1-years-j-j/img/foto03.jpeg" alt="Foto 3">
-        <img src="https://jhonathanturial.github.io/1-years-j-j/img/foto04.jpeg" alt="Foto 4">
-        <img src="https://jhonathanturial.github.io/1-years-j-j/img/foto05.jpeg" alt="Foto 5">
+    <button class="prev" onclick="mudarSlide(-1)">❮</button>
+
+    <div class="carousel">
+        <img class="slide active" src="https://jhonathanturial.github.io/1-years-j-j/img/foto01.jpeg">
+        <img class="slide" src="https://jhonathanturial.github.io/1-years-j-j/img/foto02.jpeg">
+        <img class="slide" src="https://jhonathanturial.github.io/1-years-j-j/img/foto03.jpeg">
+        <img class="slide" src="https://jhonathanturial.github.io/1-years-j-j/img/foto04.jpeg">
+        <img class="slide" src="https://jhonathanturial.github.io/1-years-j-j/img/foto05.jpeg">
     </div>
-</section>
+
+    <button class="next" onclick="mudarSlide(1)">❯</button>
+
+</div>
 
 <footer>
     <p class="frase">"Nunca desistir."</p>
