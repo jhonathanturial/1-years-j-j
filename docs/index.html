@@ -115,37 +115,6 @@ footer{
 </style>
 </head>
 
-<script>
-let slideAtual = 0;
-const slides = document.querySelectorAll('.slide');
-
-function mostrarSlide(index){
-
-    slides.forEach(slide => {
-        slide.classList.remove('active');
-    });
-
-    if(index >= slides.length){
-        slideAtual = 0;
-    } else if(index < 0){
-        slideAtual = slides.length - 1;
-    } else {
-        slideAtual = index;
-    }
-
-    slides[slideAtual].classList.add('active');
-}
-
-function mudarSlide(direcao){
-    mostrarSlide(slideAtual + direcao);
-}
-
-// troca automática a cada 4 segundos
-setInterval(() => {
-    mudarSlide(1);
-}, 4000);
-</script>
-
 <body>
 
 <header>
@@ -222,6 +191,37 @@ setInterval(() => {
         Que este seja apenas o primeiro de muitos anos ao seu lado. ❤️
     </p>
 </footer>
+
+<script>
+    let slideAtual = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function mostrarSlide(index){
+    
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+    
+        if(index >= slides.length){
+            slideAtual = 0;
+        } else if(index < 0){
+            slideAtual = slides.length - 1;
+        } else {
+            slideAtual = index;
+        }
+    
+        slides[slideAtual].classList.add('active');
+    }
+    
+    function mudarSlide(direcao){
+        mostrarSlide(slideAtual + direcao);
+    }
+    
+    // troca automática a cada 4 segundos
+    setInterval(() => {
+        mudarSlide(1);
+    }, 4000);
+</script>
 
 </body>
 </html>
